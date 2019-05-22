@@ -44,14 +44,14 @@ for container in containers:
 
 
     #String Parsing
-    trim_price = ''.join(price.split(','))
-    rm_rupee = trim_price.split("₹")
-    add_rs_price = "RS." + rm_rupee[1]
-    split_price = add_rs_price.split('E')
-    final_price = split_price[0]
-
-    split_rating = rating.split(" ")
-    final_rating = split_rating[0]
+    # trim_price = ''.join(price.split(','))
+    # rm_rupee = trim_price.split("₹")
+    # add_rs_price = "RS." + rm_rupee[1]
+    # split_price = add_rs_price.split('E')
+    # final_price = split_price[0]
+    #
+    # split_rating = rating.split(" ")
+    # final_rating = split_rating[0]
 
     print(product_name.replace(",", "|") + "," + final_price + "," + final_rating + "\n")
     f.write(product_name.replace(",", "|") + "," + final_price + "," + final_rating + "\n")
