@@ -16,7 +16,7 @@ def crawl(page):
         links = ("https://www.freelancermap.com" + (container.a["href"]))
         link.append(links)
 
-    if page<28:
+    if page<2:
         crawl(page+1)
 
 def data():
@@ -42,6 +42,7 @@ def data():
 
         try:
             company_contact_final = ' '.join(company_contact_get_data.split())
+            #Code for email extraction
             if len(company_contact_final) > 0:
                 words = company_contact_final.split()
                 # print(len(words))
@@ -62,11 +63,33 @@ def data():
         except:
             email=None
 
-        print(company_name_final.replace(',', '')+ ',' + company_description_final.replace(',', '')+ ',' + company_location_final.replace(',', '')+ ',' + company_contact_final.replace(',', '')+ ' ,' +email + "\n")
+        #Code for website extraction
+        if len(company_contact_final) > 0:
+            contact = company_contact_final.split()
+            print(type(contact))
+            print(len(contact))
+            if len(contact) >= 2:
+                if 'www' or 'hhtp' in contact[-1]:
+                    website=contact[-1]
+                    contact.remove(contact[-1])
+
+                elif 'www' or 'http' in contact[-2]:
+                    website=contact[-2]
+                    contact.remove(contact[-2])
+                else:
+                    website="Website Not Found!"
+            elif 'www' or 'http' in contact[0]:
+                website=contact[0]
+                contact.remove(contact[0])
+            else :
+                website="Website Not Found!!"
+        else:
+            website = None
+
+        print(company_name_final.replace(',', '')+ ',' + company_description_final.replace(',', '')+ ',' + company_location_final.replace(',', '')+ ',' + company_contact_final.replace(',', '')+ ' ,' +email+ ','+ website + "\n")
 
         # print(company_name_final.replace(",", "").replace("'", "") + ',' + company_description_final.replace(" ", "").strip() + ',' + ll.replace(" ", "").strip() + ',' + cc.replace(" ", "").replace(" ", "").strip()+',' + company_contact_final.find(' ') + "\n")
         # f.write(company_name_final.replace(',', '')+ ',' + company_description_final.replace(',', '')+ ',' + company_location_final.replace(',', '')+ ',' + company_contact_final.replace(',', '')+',' + email + "\n")
-
 
 def main():
     page = 1
