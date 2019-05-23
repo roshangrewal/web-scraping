@@ -16,7 +16,7 @@ def crawl(page):
         links = ("https://www.freelancermap.com" + (container.a["href"]))
         link.append(links)
 
-    if page<2:
+    if page<11:
         crawl(page+1)
 
 def data():
@@ -39,9 +39,29 @@ def data():
         company_name_final = ' '.join(company_name_get_data.split())
         company_description_final = ' '.join(company_description_get_data.split())
         company_location_final = ' '.join(company_location_get_data.split())
+        company_contact_final = ' '.join(company_contact_get_data.split())
 
         try:
-            company_contact_final = ' '.join(company_contact_get_data.split())
+            if len(company_contact_final) > 0:
+
+                # Code for email extraction
+                words = company_contact_final.split()
+                # print(len(words))
+                if len(words) >= 2:
+                    if '@' in words[-1]:
+                        email = words[-1]
+
+                    elif '@' in words[-2]:
+                        email = words[-2]
+                    else:
+                        email = "Email Not Found!"
+                elif '@' in words[0]:
+                    email = words[0]
+                else:
+                    email = "Email Not Found!!"
+            else:
+                company_contact_final = 'Blank'
+
             #Code for email extraction
             if len(company_contact_final) > 0:
                 words = company_contact_final.split()
@@ -92,7 +112,7 @@ def data():
         # f.write(company_name_final.replace(',', '')+ ',' + company_description_final.replace(',', '')+ ',' + company_location_final.replace(',', '')+ ',' + company_contact_final.replace(',', '')+',' + email + "\n")
 
 def main():
-    page = 1
+    page = 10
     crawl(page)
     data()
 

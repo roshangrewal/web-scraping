@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3e0373-aef5-4986-9ecd-352a93b7ca4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Funda dot nl/.idea/Funda dot nl.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Funda dot nl/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Funda dot nl/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Funda dot nl/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Funda dot nl/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/try_except.py" beforeDir="false" afterPath="$PROJECT_DIR$/try_except.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/try_except.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -310,7 +304,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.39812332" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.39812332" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -406,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/try_except.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
