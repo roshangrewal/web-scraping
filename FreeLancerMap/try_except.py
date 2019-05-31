@@ -41,70 +41,54 @@ def data():
         company_location_final = ' '.join(company_location_get_data.split())
         company_contact_final = ' '.join(company_contact_get_data.split())
 
-        try:
-            if len(company_contact_final) > 0:
 
-                # Code for email extraction
-                words = company_contact_final.split()
-                # print(len(words))
-                if len(words) >= 2:
-                    if '@' in words[-1]:
-                        email = words[-1]
+        if len(company_contact_final) > 0:
 
-                    elif '@' in words[-2]:
-                        email = words[-2]
-                    else:
-                        email = "Email Not Found!"
-                elif '@' in words[0]:
-                    email = words[0]
+            # Code for email extraction
+            words = company_contact_final.split()
+            # print(len(words))
+            if len(words) >= 2:
+                if '@' in words[-1]:
+                    email = words[-1]
+
+                elif '@' in words[-2]:
+                    email = words[-2]
                 else:
-                    email = "Email Not Found!!"
+                    email = "Email Not Found!"
+            elif '@' in words[0]:
+                email = words[0]
             else:
-                company_contact_final = 'Blank'
+                email = "Email Not Found!!"
+        else:
+            email = "Email Not Found!!"
 
-            #Code for email extraction
-            if len(company_contact_final) > 0:
-                words = company_contact_final.split()
-                # print(len(words))
-                if len(words) >= 2:
-                    if '@' in words[-1]:
-                        email=words[-1]
 
-                    elif '@' in words[-2]:
-                        email=words[-2]
-                    else:
-                        email="Email Not Found!"
-                elif '@' in words[0]:
-                    email=words[0]
-                else :
-                    email="Email Not Found!!"
-            else:
-                email = None
-        except:
-            email=None
 
         #Code for website extraction
-        if len(company_contact_final) > 0:
+        if len(company_contact_final) is 0:
+            company_contact_final = 'Blank'
+        else:
             contact = company_contact_final.split()
-            print(type(contact))
-            print(len(contact))
-            if len(contact) >= 2:
+            # print(type(contact))
+            # print(len(contact))
+            if len(contact) > 0:
                 if 'www' or 'hhtp' in contact[-1]:
-                    website=contact[-1]
-                    contact.remove(contact[-1])
+                    website = contact[-1]
 
                 elif 'www' or 'http' in contact[-2]:
-                    website=contact[-2]
-                    contact.remove(contact[-2])
+                    website = contact[-2]
+
+                elif 'www' or 'http' in contact[0]:
+                    website = contact[0]
+
                 else:
-                    website="Website Not Found!"
-            elif 'www' or 'http' in contact[0]:
-                website=contact[0]
-                contact.remove(contact[0])
-            else :
-                website="Website Not Found!!"
-        else:
-            website = None
+                    website = "Website Not Found!"
+
+            else:
+                website = "Website Not Found!!"
+
+
+
 
         print(company_name_final.replace(',', '')+ ',' + company_description_final.replace(',', '')+ ',' + company_location_final.replace(',', '')+ ',' + company_contact_final.replace(',', '')+ ' ,' +email+ ','+ website + "\n")
 
