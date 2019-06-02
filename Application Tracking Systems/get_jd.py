@@ -36,10 +36,10 @@ for u in url:
 #    website = soup.find("span",{"class":"value website"}).get_text()
     info = soup.find_all("infoEntity")
     try:    
-        headquaters = info[1].find_element_by_class_name("span",{"class":"value"}).get_text().strip().strip('\\u')
-        employees = info[2].find_element_by_class_name("span",{"class":"value"}).get_text().strip().strip('\\u')
-        founded = info[3].find_element_by_class_name("span",{"class":"value"}).get_text().strip().strip('\\u')
-        industry = info[5].find_element_by_class_name("span",{"class":"value"}).get_text().strip().strip('\\u')
+        headquaters = info[1].find("span",{"class":"value"}).get_text().strip().strip('\\u')
+        employees = info[2].find("span",{"class":"value"}).get_text().strip().strip('\\u')
+        founded = info[3].find("span",{"class":"value"}).get_text().strip().strip('\\u')
+        industry = info[5].find("span",{"class":"value"}).get_text().strip().strip('\\u')
     #     driver.findElement(By.xpath("//input[@id='gh-ac']")).sendKeys("Guitar"); // xpath
     # driver.findElement(By.xpath("//input[@id='gh-ac']")).sendKeys("Guitar");
 

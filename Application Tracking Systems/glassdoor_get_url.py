@@ -12,7 +12,7 @@ driver = webdriver.Firefox(executable_path=r'C:\Users\Anonymous\Downloads\geckod
 #driver.get('http://inventwithpython.com')
 
 #driver = webdriver.Firefox()
-def openbrowser(locid =1139977, key='data scientist intern'):
+def openbrowser(locid =2940587, key='Data Scientist'):
     driver.wait = WebDriverWait(driver, 5)
     driver.maximize_window()
     words = key.split()
