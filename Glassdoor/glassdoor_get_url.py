@@ -61,6 +61,6 @@ def geturl(driver):
         #     pass
     return list(url)
 
-x =openbrowser(locid =2940587, key='Data Scientist')
-with open('url_data_scientist_loc-bangalore6.json','w') as f:
+x =openbrowser(locid =2940587, key='"Software Testing"')
+with open('url_sowtfare_testing_loc_bangalore.json','w') as f:
     json.dump(geturl(driver),f, indent = 4)

@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException
 import time
 from selenium.common.exceptions import NoSuchElementException
 
-with open('url_data-scientist-bangalore.json','r') as f:
+with open('url_sowtfare_testing_loc_bangalore.json','r') as f:
     url = json.load(f)
 data ={}    
 
@@ -63,4 +63,4 @@ jd = jd_df.transpose()
 #cols = jd.columns.tolist()
 #print cols
 jd = jd[['url','Position','Company','Location','Job_Description']]
-jd.to_csv('jd_data_scientist_bangalore.csv',encoding="utf-8")
+jd.to_csv('jd_software_testing.csv',encoding="utf-8")
